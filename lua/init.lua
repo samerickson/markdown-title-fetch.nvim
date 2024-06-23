@@ -17,6 +17,11 @@ function M.formatPaste()
   })
 
   local title = string.match(res.body, "<title>(.-)</title>")
+
+  if title == nil then
+    title = "Error: Unable to fetch link title"
+  end
+
   return string.format("[%s](%s)", title, pasteRegister)
 end
 
