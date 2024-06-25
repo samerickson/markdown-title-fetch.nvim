@@ -25,11 +25,14 @@ vim.api.nvim_create_autocmd("FileType", {
 
 ### Lazy.nvim
 
-For more information see: [https://github.com/folke/lazy.nvim](https://github.com/folke/lazy.nvim)
+For more information see: [GitHub - folke/lazy.nvim: 💤 A modern plugin manager for Neovim](https://github.com/folke/lazy.nvim)
 
 ```lua
   {
     "https://github.com/samerickson/markdown-title-fetch.nvim",
+    deps = {
+      { "nvim-lua/plenary.nvim" },
+    }
     opts = {},
     keys = {
       { "<c-v>", "<cmd>MarkdownLinkPaste<cr>" },
