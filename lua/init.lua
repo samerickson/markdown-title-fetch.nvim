@@ -16,10 +16,10 @@ function M.formatPaste()
     accept = "application/json",
   })
 
-  local title = string.match(res.body, "<title>(.-)</title>")
+  local title = res.body:match("<title>(.-)</title>")
 
   if title == nil then
-    title = "Error: Unable to fetch link title"
+    title = pasteRegister:match("^%w+://([^/]+)")
   end
 
   return string.format("[%s](%s)", title, pasteRegister)
