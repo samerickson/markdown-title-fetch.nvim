@@ -18,7 +18,6 @@ function M.formatPaste()
   local res = curl.request({
     url = pasteRegister,
     method = "get",
-    accept = "application/json",
   })
 
   local title = res.body:match("<title>(.-)</title>")
