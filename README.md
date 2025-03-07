@@ -32,8 +32,5 @@ For more information see: [GitHub - folke/lazy.nvim: 💤 A modern plugin manage
   "https://github.com/samerickson/markdown-title-fetch.nvim",
   opts = {},
   cmd = "MarkdownLinkPaste",
-  keys = {
-    { "<c-v>", "<cmd>MarkdownLinkPaste<cr>" },
-  },
 },
 ```
